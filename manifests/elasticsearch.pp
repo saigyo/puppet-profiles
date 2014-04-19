@@ -6,7 +6,7 @@ class profiles::elasticsearch {
     key               => 'D27D666CD88E42B4',
     include_src       => false
   }
-
+  ->
   class { '::elasticsearch':
     version           => '1.1.0',
     ensure            => 'present',
@@ -26,16 +26,17 @@ class profiles::elasticsearch {
       }
     }
   }
-
+  
   elasticsearch::plugin{'mobz/elasticsearch-head':
-    module_dir => 'head'
+    module_dir => 'head',
   }
-
+  
   elasticsearch::plugin{'elasticsearch/elasticsearch-analysis-icu/2.0.0':
-    module_dir => 'analysis-icu'
+    module_dir => 'analysis-icu',
   }
-
+  
   elasticsearch::plugin{'elasticsearch/marvel/latest':
     module_dir => 'marvel'
+  #  require => Class['::elasticsearch']
   }
 }
