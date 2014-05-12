@@ -1,0 +1,15 @@
+name 	'acrolinx-profiles'
+version '0.1.0'
+
+author 	'Markus Ackermann'
+license ''
+summary	'Profiles for Acrolinx deployments'
+description 'Profiles for Acrolinx deployments'
+
+dependency 'puppetlabs/stdlib', 	'>= 3.2.0'
+dependency 'puppetlabs/apt', 		'>= 1.4.2'
+dependency 'puppetlabs/mysql', 		'>= 2.2.3'
+dependency 'puppetlabs/mongodb', 	'>= 0.7.0'
+dependency 'willdurand/nodejs', 	'>= 1.6.0'
+dependency 'ericsysmin/oraclejava', '>= 0.1.2'
+dependency 'elasticsearch/elasticsearch', '>= 0.3.1'
