@@ -1,5 +1,6 @@
 class profiles::mysql {
   class { '::mysql::server':
+    # TODO factor out password to param
     root_password    => 'pw',
     override_options => { 
       'mysqld' => { 
@@ -7,6 +8,7 @@ class profiles::mysql {
       } 
     },
     databases => {
+    # TODO factor out into separate profile and/or param
       'mutti' => {
         ensure  => 'present',
         charset => 'utf8',
